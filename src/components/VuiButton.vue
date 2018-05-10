@@ -1,11 +1,14 @@
 <template>
   <button class="button" :class="`${size} use-with-${usewith}`">
     <div class="button-content">
-      <span class="icon">
-        <slot name="icon" />
+      <span class="leftIcon">
+        <slot name="leftIcon" />
       </span>
       <span>
-        <slot />
+        <slot /> {{text}}
+      </span>
+      <span class="rightIcon">
+        <slot name="rightIcon" />
       </span>
     </div>
   </button>
@@ -24,6 +27,9 @@ export default {
       }
     },
     usewith: {
+      type: String
+    },
+    text: {
       type: String
     }
   }
@@ -59,7 +65,7 @@ export default {
     font-size: $button-fontsize-sm;
   }
 
-  &.use-with-input {
+  .input-button-wrapper & {
     border-left: 0;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -74,8 +80,12 @@ export default {
   align-items: center;
 }
 
-span:nth-child(1) {
+.leftIcon {
   margin-right: $pd-sm;
+}
+
+.rightIcon {
+  margin-left: $pd-sm;
 }
 
 button svg {
