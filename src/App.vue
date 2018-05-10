@@ -6,7 +6,11 @@
       </div>
     </div>
     <div class="wrapper">
-      <vui-button>nope</vui-button>
+      <vui-button>This is a button</vui-button>
+    </div>
+    <div class="wrapper">
+      <vui-input />
+      <vui-button usewith="input">Search</vui-button>
     </div>
     <footer>
       <p></p>
@@ -16,11 +20,13 @@
 
 <script>
 import VuiButton from "./components/VuiButton";
+import VuiInput from "./components/VuiInput";
 
 export default {
   name: "app",
   components: {
-    VuiButton
+    VuiButton,
+    VuiInput
   }
 };
 </script>
@@ -33,5 +39,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  font-size: 16px;
+}
+
+.wrapper {
+  padding: 32px;
+  border-top: 1px solid #eee;
 }
 </style>

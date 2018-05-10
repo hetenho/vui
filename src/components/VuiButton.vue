@@ -1,5 +1,5 @@
 <template>
-  <button class="button" :class="size">
+  <button class="button" :class="`${size} use-with-${usewith}`">
     <slot />
   </button>
 </template>
@@ -15,6 +15,9 @@ export default {
         // The value must match one of these strings
         return ["lg", "sm", ""].indexOf(value) !== -1;
       }
+    },
+    usewith: {
+      type: String
     }
   }
 };
@@ -32,15 +35,11 @@ export default {
   border: 1px solid #000;
   border-radius: $border-radius-button;
   cursor: pointer;
-  transition: transform 0.15s ease-in-out;
-
-  &:hover,
-  &:focus {
-    transform: translateY(-2px);
-  }
+  transition: all 0.15s ease-in-out;
 
   &:active {
-    transform: translateY(0px);
+    transform: translateY(1px);
+    color: #aaaaaa;
   }
 
   &.lg {
@@ -51,6 +50,14 @@ export default {
   &.sm {
     padding: $padding-button-sm;
     font-size: $button-fontsize-sm;
+  }
+
+  &.use-with-input {
+    border-left: 0;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    position: relative;
+    left: -1px;
   }
 }
 </style>
