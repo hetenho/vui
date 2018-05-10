@@ -28,9 +28,15 @@ export default {
   font-size: $button-fontsize;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background-color: white;
+  background: none;
   border: 1px solid #000;
   border-radius: $border-radius-button;
+  cursor: pointer;
+  transition: transform 0.15s ease-in-out;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
 
   &.lg {
     padding: $padding-button-lg;
