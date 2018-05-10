@@ -39,7 +39,7 @@ export default {
 
   &:active {
     transform: translateY(1px);
-    color: #aaaaaa;
+    color: #00000055;
   }
 
   &.lg {
