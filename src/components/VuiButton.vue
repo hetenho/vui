@@ -34,8 +34,13 @@ export default {
   cursor: pointer;
   transition: transform 0.15s ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:focus {
     transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0px);
   }
 
   &.lg {
