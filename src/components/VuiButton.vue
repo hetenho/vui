@@ -1,6 +1,13 @@
 <template>
   <button class="button" :class="`${size} use-with-${usewith}`">
-    <slot />
+    <div class="button-content">
+      <span class="icon">
+        <slot name="icon" />
+      </span>
+      <span>
+        <slot />
+      </span>
+    </div>
   </button>
 </template>
 
@@ -59,5 +66,21 @@ export default {
     position: relative;
     left: -1px;
   }
+}
+
+.button-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span:nth-child(1) {
+  margin-right: $pd-sm;
+}
+
+button svg {
+  width: 12px;
+  height: 12px;
+  display: flex;
 }
 </style>

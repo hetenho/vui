@@ -6,7 +6,12 @@
       </div>
     </div>
     <div class="wrapper">
-      <vui-button>This is a button</vui-button>
+      <div class="btn-wrapper">
+        <vui-button>This is a button</vui-button>
+      </div>
+      <div class="btn-wrapper">
+        <vui-button><BoxIcon slot="icon" /> Button with icon</vui-button>
+      </div>
     </div>
     <div class="wrapper">
       <vui-input />
@@ -19,6 +24,7 @@
 </template>
 
 <script>
+import { BoxIcon } from "vue-feather-icons";
 import VuiButton from "./components/VuiButton";
 import VuiInput from "./components/VuiInput";
 
@@ -26,7 +32,8 @@ export default {
   name: "app",
   components: {
     VuiButton,
-    VuiInput
+    VuiInput,
+    BoxIcon
   }
 };
 </script>
@@ -45,5 +52,12 @@ export default {
 .wrapper {
   padding: 32px;
   border-top: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-wrapper {
+  display: inline-block;
+  margin-left: 8px;
 }
 </style>
