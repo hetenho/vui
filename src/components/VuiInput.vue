@@ -2,7 +2,7 @@
   <div class="input-wrapper">
     <label class="input-label" v-if="labelText">{{labelText}}</label>
     <div class="input-button-wrapper">
-      <input :type="type" class="input" :placeholder="placeholder">
+      <input :type="type" @keyup="handleKeyup" class="input" :placeholder="placeholder">
       <slot name="input-button" />
     </div>
   </div>
@@ -32,6 +32,11 @@ export default {
     },
     placeholder: {
       type: String
+    }
+  },
+  methods: {
+    handleKeyup(e) {
+      this.$emit("change", e.target.value);
     }
   }
 };

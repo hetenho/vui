@@ -1,5 +1,5 @@
 <template>
-  <button :class="`button ${size} use-with-${usewith}`" @click="$emit('click')">
+  <button type="button" :class="`button ${size} use-with-${usewith}`" @click="$emit('click')">
     <div class="button-content">
       <span class="leftIcon">
         <slot name="leftIcon" />

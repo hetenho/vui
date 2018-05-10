@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="wrapper">
-      <vui-input placeholder="Write something" labelText="This is a label">
+      <vui-input placeholder="Write something" labelText="This is a label" @change="handleChange">
         <vui-button slot="input-button" text="Search" @click="handleClick" />
       </vui-input>
     </div>
@@ -39,6 +39,9 @@ export default {
   methods: {
     handleClick() {
       console.log("wooop!");
+    },
+    handleChange(v) {
+      console.log(v);
     }
   }
 };
