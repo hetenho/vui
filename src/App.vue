@@ -1,17 +1,26 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="wrapper">
+      <div class="heading">
+        <h1>Vui</h1>
+      </div>
+    </div>
+    <div class="wrapper">
+      <vui-button>nope</vui-button>
+    </div>
+    <footer>
+      <p></p>
+    </footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import VuiButton from "./components/VuiButton";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    VuiButton
   }
 };
 </script>

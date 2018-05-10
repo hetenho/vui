@@ -1,0 +1,24 @@
+$base: 16px;
+
+// Paddings
+$pd: $base;
+$pd-md: $base*1.5;
+$pd-lg: $base*2;
+$pd-xl: $base*3;
+$pd-sm: $base/2;
+$pd-xs: $base/4;
+
+// Margins
+$mg: $base;
+$mg-md: $base*1.5;
+$mg-lg: $base*2;
+$mg-xl: $base*3;
+$mg-sm: $base/2;
+$mg-xs: $base/4;
+
+// Borders
+$border-radius: 2px;
+
+// Buttons
+$padding-button: $pd-sm $pd;
+$border-radius-button: $border-radius;
