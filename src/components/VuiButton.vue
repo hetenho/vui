@@ -10,11 +10,11 @@ export default {
   props: {
     size: {
       type: String,
+      default: "",
       validator: function(value) {
         // The value must match one of these strings
         return ["lg", "sm", ""].indexOf(value) !== -1;
-      },
-      default: ""
+      }
     }
   }
 };
@@ -25,11 +25,21 @@ export default {
 
 .button {
   padding: $padding-button;
-  font-size: 12px;
+  font-size: $button-fontsize;
   text-transform: uppercase;
   letter-spacing: 1px;
   background-color: white;
   border: 1px solid #000;
   border-radius: $border-radius-button;
+
+  &.lg {
+    padding: $padding-button-lg;
+    font-size: $button-fontsize-lg;
+  }
+
+  &.sm {
+    padding: $padding-button-sm;
+    font-size: $button-fontsize-sm;
+  }
 }
 </style>
