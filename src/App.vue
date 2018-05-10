@@ -15,7 +15,7 @@
     </div>
     <div class="wrapper">
       <vui-input placeholder="Write something" labelText="This is a label">
-        <vui-button slot="input-button" text="Search" />
+        <vui-button slot="input-button" text="Search" @click="handleClick" />
       </vui-input>
     </div>
     <footer>
@@ -35,6 +35,11 @@ export default {
     VuiButton,
     VuiInput,
     BoxIcon
+  },
+  methods: {
+    handleClick() {
+      console.log("wooop!");
+    }
   }
 };
 </script>
